@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<meta name="description" content="삭막한 도시 속 나만의 컬러를 찾다. Color me T-shirts Kit">
+<meta property="og:title" content="Color me">
+<meta property="og:url" content="깃헙주소">
+<meta property="og:description" content="삭막한 도시 속 나만의 컬러를 찾다. Color me T-shirts Kit">
+<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+	<title>Colorme</title>
+	<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Homemade+Apple&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<style type="text/css">
+	html{font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box; scroll-behavior: smooth;}
+	body,h1,h2,p,div,ul,li{margin: 0; padding: 0;}
+	a{text-decoration: none; color: white; font-family: 'Give You Glory', cursive; word-spacing: 1px; font-size: 2em;}
+	h1{font-family: 'Give You Glory', cursive;font-weight: 100; word-spacing: 10px; font-size: 8em; letter-spacing: 10px; padding-top: 100px;}
+	h2{font-weight: 500; word-spacing: -1px; font-size: 2em; letter-spacing: -2px; padding-top: 50px; color: #006699; padding-bottom: 30px;}
+	h4{font-family: 'Give You Glory', cursive; color: white; font-weight: 100; word-spacing: 1px; font-size: 6em; letter-spacing: -2px; padding-top: 100px;}
+	p, h3{color: #0099CC}
+	header{background: url(./img/hhh.jpg); height: 500px; background-size: 100%; background-repeat: no-repeat;}
+	header p{width: 500px; margin: auto; padding-top: 30px;}
+	header .abs{position: absolute;height: 400px; background: black; width: 100%; opacity: 0; z-index: 1;}
+	nav{margin: 30px 90px; top: 80; z-index: 10; float: right;}
+nav ul{margin:auto; padding-top: 100px;float: right;}
+nav ul li{list-style-type: none; width: auto; height: 40px;}
+nav ul li a{display: block; line-height: 40px; text-align: center;}
+nav ul li a:hover{background: none; transition: all 0.8s; color: #FF9900;}
+section{padding-top: 100px; margin-top: 40px; padding-bottom: 30px;}
+footer{background: url(./img/foot.jpg); padding-top: 50px; background-repeat: no-repeat; background-size: 100%}
+img{display: block; width:100%;}
+.buy{display: block; background: #006699; width: 150px; height: 40px; text-align: center; line-height: 50px; text-decoration: none; font-weight: bold; border-radius: 5px;}
+.buy:hover{background: orange; transition: all 0.5s;}
+#intro{position: absolute;
+right: 340px; top: 800px;}
+#intro-line{position: absolute; right: 100px; top: 500px;}
+.r1 {border-radius: 10px;}
+.text-right{float: right;}
+.text-center{text-align: center;}
+.wtext{letter-spacing: 3px; padding-top: 0px;}
+.atext{font-size: 1.5em; word-spacing: -3px;}
+.btext{line-height: 40px; word-spacing: 2px; font-size: 1.5em;}
+.ctext{font-size: 2em;}
+.text-op{opacity: 60%;}
+.row{width: 1000px; margin: auto;}
+.row1{width: 1600px; margin: auto;}
+.text-white{color: white;}
+.bgfixed{background-attachment: fixed;}
+.col-1{width: 16.66%;}
+.col-2{width: 33.33%;}
+.col-3{width: 50%; padding: 10px;}
+.col-4{width: 100%;}
+.fcol{width: 100% padding-top: 30px;}
+.col-5{width: 60%;padding: 10px;}
+.col-6{width: 40%; padding: 5px;}
+.bg-white{background: white;}
+.bg-gray{background: gray;}
+.bg-blue{background: #006699;}
+.h-10{height: 10px;}
+.h-100{height: 100px;}
+.h-400{height: 400px;}
+.h-600{height: 600px;}
+.h-800{height: 800px;}
+.h-1100{height: 1500px;}
+.flexbox{display: flex;}
+.row2{width: 1000px; margin: auto; margin-top: 10px; display: flex; padding: 5px;}
+.rcol-1{margin: 0px 5px; width: 490px;}
+.rcol-2{margin: 0px 5px; width: 990px;}
+.footimg{background: url(./img/foot.jpg);
+background-size: 100% auto;
+background-repeat: no-repeat;}
+ul{width: 500px; background: none; height: 60px; float: right;}
+li{background: none; list-style-type: none; width: 50%;height: 30px; text-align: center; padding: 30px;}
+
+select{width: 500px; height: 50px; font-size: 30px; color: #006699; border: 2px solid #006699; appearance: none; -webkit-appearance:none; background: url(./img/arow.png)no-repeat right 13px center; background-size: 5%;}
+
+
+.bannner {position: relative;
+display: inline-block;}
+.bannner img {max-width: 100%;}
+.bannner span.text {font-family: 'Coming Soon', cursive;
+	position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+display: none;
+width: 100%;
+font-size: 70px;
+color: #FF9900;
+font-weight: 900;
+text-align: center;
+}
+.bannner::before, .bannner::after{content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+width: 95%;
+height: 95%;
+transform: translate(-50%,-50%);
+transition: all 1.5s;
+}
+.bannner::before {border-top: 2px solid  orange;
+border-bottom: 2px solid  orange;
+width: 0;}
+.bannner::after {border-left: 2px solid  orange;
+	border-right: 2px solid  orange;
+	height: 0;
+}
+.bannner:hover span.text{display: block;}
+.bannner:hover::before{width: 95%;}
+.bannner:hover::after{height: 95%;}	
+
+
+
+
+* {box-sizing:border-box} 
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;}
+  .mySlides {
+    display: none;}
+    .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #66CCFF;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #6699FF;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+a.jcm-top { position: fixed; right: 100px; bottom: 60px; border-radius: 25px; color: #ffffff; text-align: center; width: 60px; height: 55px; font-size: 40px;  background-color:#99CCFF; opacity:0.5; filter:alpha(opacity=80); z-index: 999; display: none; }
+
+
+
+
+	</style>
+
+
+</head>
+<body>
+	
+	<header class="bgfixed">
+		<div class="abs"></div>
+		<div class="row1 text-center">
+				<h1 class="text-white">Color me</h1>
+			<nav>
+		
+			
+<ul class="col-4 flexbox">
+					<li><a href="#a">Color me</a></li>
+					<li><a href="#d">Detail</a></li>
+					<li><a href="#h">How to make</a></li>
+				</ul>
+			
+		</nav>
+			</div>
+		</div>
+		</header>
+	
+
+
+			<section>
+			<div class="row text-center flexbox">
+				<div class="col-6 h-400">
+					<img src="./img/prod.jpg">
+				</div>
+				<div class="col-5">
+					<div class="r1 bg-blue h-10"></div>
+					<h2 class="wtext">Color me T-shirts kit</h2>
+					<p class="wtext text-right">칙칙한 도시속<br> &nbsp;&nbsp;내가 만드는<br> &nbsp;&nbsp;나만의 색깔</p>
+
+					<select id="intro">
+						<option selected="selected">Color</option>
+						<option>Midnight Blue</option>
+						<option>Evening Sky Purple</option>
+
+					</select>
+					
+					<br><br><br><br><br><br><br><br><br><p class="text-right ctext">₩17,500</p> <br><br><br><a class="buy text-right" href="none">바로구매</a><br><br><br><br><br>
+					<div class="r1 bg-blue h-10"></div>
+				</div>
+			</div>
+
+		</section>
+		<section>
+			<div id="a" class="col-2 row text-center h-1100">
+				<h2>상품 설명</h2>
+				<img src="./img/product.jpg">
+				<br><br><br><br><br><br>
+				<p class="btext">생기없는 도시 속 <br>이 세상 하나뿐인 티셔츠로<br>자기만의 색깔을 찾아보세요.</p><br><br><br><br><br>
+				<p class="btext">Tie-dye 염색을 이용해<br>누구나 손쉽게<br>자신만의 티셔츠를<br>만들 수 있습니다.</p>
+			</div>
+		</section>
+		<section>
+			<div class="col-4 bg-gray h-800">
+				<img src="./img/backb.jpg">
+			</div>
+		</section>
+		<section class="h-1100 atext">
+			<div class="row">
+				<div class="col-2 h-100 row text-center ">
+					<h2>Size</h2>
+					<p>Free</p>
+					
+
+					
+				</div>
+			</div>
+		
+					<div class="col-1 row text-center h-400">
+						<br><br><br><br><br><br>
+						<h2>Size Chart</h2>
+						<p>Length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 68cm</p><p>Shoulder &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40cm</p><p>Sleeve &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22cm</p><p>Chest &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50cm</p>
+						<br><br>
+						<p class="text-op">*측정 방식에 따라 1~2cm 오차가 있을 수 있습니다.</p>
+
+
+			</div>
+		</section>
+		<section>
+			<h2 id="d" class="text-center">Detail</h2>
+			<div class="row2 flexbox">
+				<div class="rcol-1">
+					<img src="./img/detailb.jpg">
+				</div>
+				<div class="rcol-1 ">
+					<img src="./img/detailc.jpg">
+				</div>
+			</div>
+		<div class="row2 flexbox">
+			<div class="rcol-2">
+			<img src="./img/detaild.jpg">
+		</div>
+	</div>
+	<div class="row2 flexbox">
+			<div class="rcol-2">
+			<img src="./img/detaile.jpg">
+		</div>
+	</div>
+	<div class="row2 flexbox">
+				<div class="rcol-1">
+					<img src="./img/detailf.jpg">
+				</div>
+				<div class="rcol-1 ">
+					<img src="./img/detailg.jpg">
+				</div>
+			</div>
+		</section>
+		<section>
+			
+			<div class="col-4">
+				<div class="bannner">
+				<img src="./img/detailh2.jpg">
+					<span class="text-op text">Your<br>Color<br>,<br>Your<br>Individuality</span>
+				</div>
+			</div>
+		</section>
+		<section>
+		<div class="row2 flexbox">
+				<div class="rcol-1">
+					<img src="./img/gcity.jpg">
+				</div>
+			</div>
+		
+			
+			<div class="row2 flexbox">
+				<div class="rcol-1"></div>
+				<div class="rcol-1">
+					<img src="./img/gcc.jpg">
+				</div>
+
+			</div>
+			<div class="row2 flexbox">
+				<div class="rcol-1">
+					<img src="./img/gcc2.jpg">
+				</div>
+			</div>
+	
+			<div class="row2 flexbox">
+				<div class="rcol-1"></div>
+				<div class="rcol-1">
+					<img src="./img/gcity3.jpg">
+				</div>
+				
+			</div>
+		  </section>
+
+		  <section>
+		  	<h2 class="text-center">Product</h2>
+		  	<div class="col-2 row ">
+		  	<img src="./img/pd1.jpg">
+		  	<img src="./img/pd2.jpg">
+		  	<img src="./img/pd3.jpg">
+		  </section>
+		  <section>
+		  	<div class="col-2 row text-center">
+		  	<h2> Component</h2>
+		  	<img src="./img/prod2.jpg">
+		  	<h3>흰색 무지 티셔츠 1EA &nbsp;&nbsp;&nbsp;고무밴드 10EA &nbsp;&nbsp;&nbsp;염색약 3EA</h3>
+		  </div>
+		</section>
+		<section>
+			<div id="h" class="col-2 row text-center">
+		  	<h2>How to make</h2>
+		  		<div class="slideshow-container">
+<div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="i1.jpg" style="width:100%">
+    <div class="text">KIT안의 티셔츠를 따뜻한 물에 적셔줍니다</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="i2.jpg" style="width:100%">
+    <div class="text">적신 티셔츠를 원하는 모양으로 고무줄로 고정시켜줍니다.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="i3.jpg" style="width:100%">
+    <div class="text">따뜻한 물 한 컵, 염색약, 소금 한스푼을 잘 섞어 줍니다</div>
+  </div>
+   <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="i4.jpg" style="width:100%">
+    <div class="text">적신 티셔츠에 염색약을 마음대로 뿌려줍니다.</div>
+  </div>
+   <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="i5.jpg" style="width:100%">
+    <div class="text">고무줄로 묶인 부분은 들추어 골고루 뿌려줍니다.</div>
+  </div>
+   <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="i6.jpg" style="width:100%">
+    <div class="text">흐르는 물로 고무줄로 고정된 티셔츠를 충분히 헹군 후 고무줄을 풀고 다시 헹궈줍니다.</div>
+  </div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+</div>
+
+
+
+</section>
+
+<script>
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+$( document ).ready( function() { $( window ).scroll( function() { if ( $( this ).scrollTop() > 800 ) { $( '.jcm-top' ).fadeIn(); } else { $( '.jcm-top' ).fadeOut(); } } ); $( '.jcm-top' ).click( function() { $( 'html, body' ).animate( { scrollTop : 0 }, 600 ); return false; } ); } );
+
+
+
+
+</script>
+</div>
+<a href="#" class="jcm-top"><i class="icon icon-arrow-up">
+	top
+</i></a>
+
+		  </section>
+
+</body>
+<footer>
+	
+			<div class="fcol h-400">
+				
+				
+				<h4 class="text-center">Color me</h4>
+				<p class="text-center text-white">
+				ⓒ 2020. 국립한경대학교 디자인학과 한승규 All Rights Reserved.</p>
+			
+			</div>
+			
+
+</footer>
+
+</html>
